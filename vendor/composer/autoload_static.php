@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit3b9c7e265447f61334e7f444d70557f3
+class ComposerStaticInitd8885c59a5e57061da1039fd3ca6fbf5
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -37,6 +37,9 @@ class ComposerStaticInit3b9c7e265447f61334e7f444d70557f3
         '9f394da3192a168c4633675768d80428' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/helpers.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
+        '381c1f7485be5ec909ca0fe1ede4b928' => __DIR__ . '/../..' . '/app/Helpers/Helpers.php',
+        'f87f41f639bcf0a85d372292f5f5eb74' => __DIR__ . '/../..' . '/app/Helpers/FormatDataHelpers.php',
+        '1f287af26b1513c3189715e46becd979' => __DIR__ . '/../..' . '/config/Types/dataAuth.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -602,10 +605,10 @@ class ComposerStaticInit3b9c7e265447f61334e7f444d70557f3
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
-        'App\\Models\\Point' => __DIR__ . '/../..' . '/app/Models/Point.php',
-        'App\\Models\\Post' => __DIR__ . '/../..' . '/app/Models/Post.php',
-        'App\\Models\\Product' => __DIR__ . '/../..' . '/app/Models/Product.php',
+        'App\\Models\\Answer' => __DIR__ . '/../..' . '/app/Models/Answer.php',
+        'App\\Models\\Event' => __DIR__ . '/../..' . '/app/Models/Event.php',
+        'App\\Models\\EventListQuestion' => __DIR__ . '/../..' . '/app/Models/EventListQuestion.php',
+        'App\\Models\\Question' => __DIR__ . '/../..' . '/app/Models/Question.php',
         'App\\Models\\Setting' => __DIR__ . '/../..' . '/app/Models/Setting.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -614,23 +617,25 @@ class ComposerStaticInit3b9c7e265447f61334e7f444d70557f3
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RepositoryServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RepositoryServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Repositories\\Answers\\AnswerRepository' => __DIR__ . '/../..' . '/app/Repositories/Answers/AnswerRepository.php',
+        'App\\Repositories\\Answers\\AnswerRepositoryInterface' => __DIR__ . '/../..' . '/app/Repositories/Answers/AnswerRepositoryInterface.php',
         'App\\Repositories\\BaseRepository' => __DIR__ . '/../..' . '/app/Repositories/BaseRepository.php',
-        'App\\Repositories\\Categories\\CategoryRepository' => __DIR__ . '/../..' . '/app/Repositories/Categories/CategoryRepository.php',
-        'App\\Repositories\\Categories\\CategoryRepositoryInterface' => __DIR__ . '/../..' . '/app/Repositories/Categories/CategoryRepositoryInterface.php',
-        'App\\Repositories\\Points\\PointRepository' => __DIR__ . '/../..' . '/app/Repositories/Points/PointRepository.php',
-        'App\\Repositories\\Points\\PointRepositoryInterface' => __DIR__ . '/../..' . '/app/Repositories/Points/PointRepositoryInterface.php',
-        'App\\Repositories\\Posts\\PostRepository' => __DIR__ . '/../..' . '/app/Repositories/Posts/PostRepository.php',
-        'App\\Repositories\\Posts\\PostRepositoryInterface' => __DIR__ . '/../..' . '/app/Repositories/Posts/PostRepositoryInterface.php',
+        'App\\Repositories\\EventListQuestions\\EventListQuestionRepository' => __DIR__ . '/../..' . '/app/Repositories/EventListQuestions/EventListQuestionRepository.php',
+        'App\\Repositories\\EventListQuestions\\EventListQuestionRepositoryInterface' => __DIR__ . '/../..' . '/app/Repositories/EventListQuestions/EventListQuestionRepositoryInterface.php',
+        'App\\Repositories\\Events\\EventRepository' => __DIR__ . '/../..' . '/app/Repositories/Events/EventRepository.php',
+        'App\\Repositories\\Events\\EventRepositoryInterface' => __DIR__ . '/../..' . '/app/Repositories/Events/EventRepositoryInterface.php',
+        'App\\Repositories\\Questions\\QuestionRepository' => __DIR__ . '/../..' . '/app/Repositories/Questions/QuestionRepository.php',
+        'App\\Repositories\\Questions\\QuestionRepositoryInterface' => __DIR__ . '/../..' . '/app/Repositories/Questions/QuestionRepositoryInterface.php',
         'App\\Repositories\\RepositoryInterface' => __DIR__ . '/../..' . '/app/Repositories/RepositoryInterface.php',
         'App\\Repositories\\Settings\\SettingRepository' => __DIR__ . '/../..' . '/app/Repositories/Settings/SettingRepository.php',
         'App\\Repositories\\Settings\\SettingRepositoryInterface' => __DIR__ . '/../..' . '/app/Repositories/Settings/SettingRepositoryInterface.php',
         'App\\Repositories\\Users\\UserRepository' => __DIR__ . '/../..' . '/app/Repositories/Users/UserRepository.php',
         'App\\Repositories\\Users\\UserRepositoryInterface' => __DIR__ . '/../..' . '/app/Repositories/Users/UserRepositoryInterface.php',
-        'App\\Services\\Admins\\CategoryService' => __DIR__ . '/../..' . '/app/Services/Admins/CategoryService.php',
+        'App\\Services\\Admins\\AnswerService' => __DIR__ . '/../..' . '/app/Services/Admins/AnswerService.php',
+        'App\\Services\\Admins\\EventListQuestionService' => __DIR__ . '/../..' . '/app/Services/Admins/EventListQuestionService.php',
+        'App\\Services\\Admins\\EventService' => __DIR__ . '/../..' . '/app/Services/Admins/EventService.php',
         'App\\Services\\Admins\\LoginService' => __DIR__ . '/../..' . '/app/Services/Admins/LoginService.php',
-        'App\\Services\\Admins\\PointService' => __DIR__ . '/../..' . '/app/Services/Admins/PointService.php',
-        'App\\Services\\Admins\\PostService' => __DIR__ . '/../..' . '/app/Services/Admins/PostService.php',
-        'App\\Services\\Admins\\ProductService' => __DIR__ . '/../..' . '/app/Services/Admins/ProductService.php',
+        'App\\Services\\Admins\\QuestionService' => __DIR__ . '/../..' . '/app/Services/Admins/QuestionService.php',
         'App\\Services\\Admins\\SettingService' => __DIR__ . '/../..' . '/app/Services/Admins/SettingService.php',
         'App\\Services\\Admins\\UserService' => __DIR__ . '/../..' . '/app/Services/Admins/UserService.php',
         'App\\Services\\Common\\CommonCategoryService' => __DIR__ . '/../..' . '/app/Services/Common/CommonCategoryService.php',
@@ -5104,6 +5109,7 @@ class ComposerStaticInit3b9c7e265447f61334e7f444d70557f3
         'Modules\\Admins\\Http\\Controllers\\AdminsController' => __DIR__ . '/../..' . '/Modules/Admins/Http/Controllers/AdminsController.php',
         'Modules\\Admins\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/Modules/Admins/Http/Controllers/Auth/LoginController.php',
         'Modules\\Admins\\Http\\Controllers\\CategoriesController' => __DIR__ . '/../..' . '/Modules/Admins/Http/Controllers/CategoriesController.php',
+        'Modules\\Admins\\Http\\Controllers\\PhotosController' => __DIR__ . '/../..' . '/Modules/Admins/Http/Controllers/PhotosController.php',
         'Modules\\Admins\\Http\\Controllers\\PointsController' => __DIR__ . '/../..' . '/Modules/Admins/Http/Controllers/PointsController.php',
         'Modules\\Admins\\Http\\Controllers\\PostsController' => __DIR__ . '/../..' . '/Modules/Admins/Http/Controllers/PostsController.php',
         'Modules\\Admins\\Http\\Controllers\\ProductsController' => __DIR__ . '/../..' . '/Modules/Admins/Http/Controllers/ProductsController.php',
@@ -5112,14 +5118,21 @@ class ComposerStaticInit3b9c7e265447f61334e7f444d70557f3
         'Modules\\Admins\\Http\\Requests\\Category\\CreateRequest' => __DIR__ . '/../..' . '/Modules/Admins/Http/Requests/Category/CreateRequest.php',
         'Modules\\Admins\\Http\\Requests\\Category\\EditRequest' => __DIR__ . '/../..' . '/Modules/Admins/Http/Requests/Category/EditRequest.php',
         'Modules\\Admins\\Http\\Requests\\LoginRequest' => __DIR__ . '/../..' . '/Modules/Admins/Http/Requests/LoginRequest.php',
+        'Modules\\Admins\\Http\\Requests\\Photo\\CreateRequest' => __DIR__ . '/../..' . '/Modules/Admins/Http/Requests/Photo/CreateRequest.php',
+        'Modules\\Admins\\Http\\Requests\\Photo\\EditRequest' => __DIR__ . '/../..' . '/Modules/Admins/Http/Requests/Photo/EditRequest.php',
         'Modules\\Admins\\Http\\Requests\\Point\\CreateRequest' => __DIR__ . '/../..' . '/Modules/Admins/Http/Requests/Point/CreateRequest.php',
         'Modules\\Admins\\Http\\Requests\\Point\\EditRequest' => __DIR__ . '/../..' . '/Modules/Admins/Http/Requests/Point/EditRequest.php',
         'Modules\\Admins\\Http\\Requests\\Post\\CreateRequest' => __DIR__ . '/../..' . '/Modules/Admins/Http/Requests/Post/CreateRequest.php',
         'Modules\\Admins\\Http\\Requests\\Post\\EditRequest' => __DIR__ . '/../..' . '/Modules/Admins/Http/Requests/Post/EditRequest.php',
+        'Modules\\Admins\\Http\\Requests\\Setting\\EditRequest' => __DIR__ . '/../..' . '/Modules/Admins/Http/Requests/Setting/EditRequest.php',
         'Modules\\Admins\\Providers\\AdminsServiceProvider' => __DIR__ . '/../..' . '/Modules/Admins/Providers/AdminsServiceProvider.php',
         'Modules\\Admins\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Admins/Providers/RouteServiceProvider.php',
         'Modules\\Pages\\Database\\Seeders\\PagesDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Pages/Database/Seeders/PagesDatabaseSeeder.php',
+        'Modules\\Pages\\Http\\Controllers\\CategoriesController' => __DIR__ . '/../..' . '/Modules/Pages/Http/Controllers/CategoriesController.php',
+        'Modules\\Pages\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/Modules/Pages/Http/Controllers/HomeController.php',
         'Modules\\Pages\\Http\\Controllers\\PagesController' => __DIR__ . '/../..' . '/Modules/Pages/Http/Controllers/PagesController.php',
+        'Modules\\Pages\\Http\\Controllers\\PostsController' => __DIR__ . '/../..' . '/Modules/Pages/Http/Controllers/PostsController.php',
+        'Modules\\Pages\\Http\\Controllers\\ProductsController' => __DIR__ . '/../..' . '/Modules/Pages/Http/Controllers/ProductsController.php',
         'Modules\\Pages\\Providers\\PagesServiceProvider' => __DIR__ . '/../..' . '/Modules/Pages/Providers/PagesServiceProvider.php',
         'Modules\\Pages\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Pages/Providers/RouteServiceProvider.php',
         'Monolog\\Attribute\\AsMonologProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Attribute/AsMonologProcessor.php',
@@ -8430,10 +8443,10 @@ class ComposerStaticInit3b9c7e265447f61334e7f444d70557f3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit3b9c7e265447f61334e7f444d70557f3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit3b9c7e265447f61334e7f444d70557f3::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit3b9c7e265447f61334e7f444d70557f3::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit3b9c7e265447f61334e7f444d70557f3::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd8885c59a5e57061da1039fd3ca6fbf5::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd8885c59a5e57061da1039fd3ca6fbf5::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd8885c59a5e57061da1039fd3ca6fbf5::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitd8885c59a5e57061da1039fd3ca6fbf5::$classMap;
 
         }, null, ClassLoader::class);
     }

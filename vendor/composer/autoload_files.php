@@ -36,4 +36,7 @@ return array(
     '9f394da3192a168c4633675768d80428' => $vendorDir . '/nwidart/laravel-modules/src/helpers.php',
     'ec07570ca5a812141189b1fa81503674' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
     '320163ac6b93aebe3dc25b60a0533d56' => $vendorDir . '/spatie/laravel-ignition/src/helpers.php',
+    '381c1f7485be5ec909ca0fe1ede4b928' => $baseDir . '/app/Helpers/Helpers.php',
+    'f87f41f639bcf0a85d372292f5f5eb74' => $baseDir . '/app/Helpers/FormatDataHelpers.php',
+    '1f287af26b1513c3189715e46becd979' => $baseDir . '/config/Types/dataAuth.php',
 );
