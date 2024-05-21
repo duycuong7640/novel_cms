@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Posts;
+namespace App\Repositories\Products;
 
 use App\Repositories\RepositoryInterface;
 

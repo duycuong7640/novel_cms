@@ -60,7 +60,7 @@
                                     {{--                                    <th width="55">Dịch vụ</th>--}}
                                     <th width="50">Created</th>
                                     <th width="50">Modified</th>
-                                    <th width="50">ID</th>
+{{--                                    <th width="50">ID</th>--}}
                                     <th width="95"></th>
                                 </tr>
                                 </thead>
@@ -104,7 +104,7 @@
                                         {{--                                        </td>--}}
                                         <td>{{ \Helpers::formatDate($row->created_at) }}</td>
                                         <td>{{ \Helpers::formatDate($row->updated_at) }}</td>
-                                        <td>{{ $row->id }}</td>
+{{--                                        <td>{{ $row->id }}</td>--}}
                                         <td>
                                             <a class="icon-form" title="edit"
                                                href="{{ route('admin.product.edit', ['id' => $row->id, 'page' => $data['list']->currentPage(), 'parent_id' => (request()->has('parent_id') ? request()->get('parent_id') : '')]) }}">

@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Repositories\Posts;
+namespace App\Repositories\Products;
 
-use App\Models\Post;
 use App\Models\Product;
 use App\Repositories\BaseRepository;
 

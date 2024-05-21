@@ -5,6 +5,7 @@ namespace Modules\Admins\Http\Controllers;
 use App\Helpers\Helpers;
 use App\Services\Admins\CategoryService;
 use App\Services\Admins\PostService;
+use App\Services\Admins\ProductService;
 use App\Services\Common\CommonCategoryService;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
@@ -16,15 +17,15 @@ use Modules\Admins\Http\Requests\Post\EditRequest;
 class ProductsController extends Controller
 {
 
-    private $postService;
+    private $productService;
     private $commonCategoryService;
     private $type;
 
-    public function __construct(PostService $postService, CommonCategoryService $commonCategoryService)
+    public function __construct(ProductService $productService, CommonCategoryService $commonCategoryService)
     {
-        $this->postService = $postService;
+        $this->productService = $productService;
         $this->commonCategoryService = $commonCategoryService;
-        $this->type = \dataCategory::TYPE[1];
+        $this->type = \dataCategory::TYPE[2];
     }
 
     /**
@@ -35,7 +36,7 @@ class ProductsController extends Controller
     {
         try {
             $data['common'] = Helpers::titleAction([\adminForm::FORM_HEAD['INDEX']]);
-            $data['list'] = $this->postService->getList(['paginate' => \dataQuery::LIMIT, 'type' => $this->type]);
+            $data['list'] = $this->productService->getList(['paginate' => \dataQuery::LIMIT, 'type' => $this->type]);
             $data['category'] = $this->commonCategoryService->getListMenu(['type' => [$this->type], 'parent_id' => [(request()->has('parent_id') ? request()->get('parent_id') : '')]]);
             $data['multi'] = $this->commonCategoryService->getListMenu(['multi' => true]);
             return view('admins::products.index', ['data' => $data]);
@@ -67,7 +68,7 @@ class ProductsController extends Controller
     {
         try {
             $_params = $request->all();
-            if ($this->postService->create($_params)) {
+            if ($this->productService->create($_params)) {
                 return redirect(route('admin.product.index'));
             } else {
                 $errors = new MessageBag(['error' => \adminNotify::FAIL]);
@@ -96,7 +97,7 @@ class ProductsController extends Controller
     {
         try {
             $data['common'] = Helpers::titleAction([\adminForm::FORM_HEAD['UPDATE']]);
-            $data['detail'] = $this->postService->find($id);
+            $data['detail'] = $this->productService->find($id);
             if (empty($data['detail']->id)) return abort(404);
             $data['category'] = $this->commonCategoryService->getListMenu(['type' => [$this->type], 'multi' => true, 'parent_id' => [$data['detail']->category_id]]);
             return view('admins::products.edit', ['data' => $data]);
@@ -112,11 +113,11 @@ class ProductsController extends Controller
     public function update(EditRequest $request, $id)
     {
         try {
-            $detail = $this->postService->find($id);
+            $detail = $this->productService->find($id);
             if (empty($detail->id)) return abort(404);
 
             $_params = $request->all();
-            if ($this->postService->update($detail->uuid, $_params)) {
+            if ($this->productService->update($detail->uuid, $_params)) {
                 session()->flash('success', \adminNotify::SUCCESS);
                 return redirect(route('admin.product.index', ['page' => (!empty($_GET['page']) ? $_GET['page'] : 1), 'parent_id' => (request()->has('parent_id') ? request()->get('parent_id') : '')]));
             } else {
@@ -136,10 +137,10 @@ class ProductsController extends Controller
     public function status($id, $status)
     {
         try {
-            $detail = $this->postService->find($id);
+            $detail = $this->productService->find($id);
             if (empty($detail->id)) return abort(404);
 
-            if ($this->postService->update($detail->uuid, [$status => ($detail->$status ? \dataCategory::DE_ACTIVE : \dataCategory::ACTIVE)])) {
+            if ($this->productService->update($detail->uuid, [$status => ($detail->$status ? \dataCategory::DE_ACTIVE : \dataCategory::ACTIVE)])) {
                 session()->flash('success', \adminNotify::SUCCESS);
             } else {
                 session()->flash('error', \adminNotify::FAIL);
@@ -158,14 +159,14 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         try {
-            $detail = $this->postService->find($id);
+            $detail = $this->productService->find($id);
             if (empty($detail->id)) return abort(404);
 
             if (in_array($id, [])) {
                 session()->flash('error', \adminNotify::CANNOT_DELETE);
                 return back();
             }
-            if ($this->postService->destroy($id)) {
+            if ($this->productService->destroy($id)) {
                 session()->flash('success', \adminNotify::SUCCESS);
             } else {
                 session()->flash('error', \adminNotify::FAIL);

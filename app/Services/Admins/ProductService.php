@@ -3,12 +3,9 @@
 namespace App\Services\Admins;
 
 use App\Helpers\Helpers;
-use App\Repositories\Categories\CategoryRepositoryInterface;
-use App\Repositories\Posts\PostRepositoryInterface;
-use App\Repositories\Posts\ProductRepositoryInterface;
+use App\Repositories\Products\ProductRepositoryInterface;
 use App\Services\Common\CommonCategoryService;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
 
 class ProductService
 {
