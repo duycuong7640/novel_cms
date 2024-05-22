@@ -341,7 +341,7 @@ class timthumb
         $str = array();
 
 
-        $arr = explode('!', $_GET['query']);
+        $arr = explode('!/', $_GET['query']);
 
         $img = empty($arr[1]) ? '' : $arr[1];
 

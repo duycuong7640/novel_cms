@@ -170,7 +170,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         \App\Providers\RepositoryServiceProvider::class,
         UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
+//        Intervention\Image\ImageServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -187,7 +187,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
         'Helpers' => App\Helpers\Helpers::class,
-        'Image' => Intervention\Image\Facades\Image::class,
+//        'Image' => Intervention\Image\Facades\Image::class,
     ])->toArray(),
 
     'debug_blacklist' => [

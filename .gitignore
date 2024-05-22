@@ -3,6 +3,7 @@
 /public/storage
 /public/store_file
 /public/images_tmp
+/public/cache
 /storage/*.key
 /storage/debugbar
 /vendor

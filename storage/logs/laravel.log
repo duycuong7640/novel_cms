@@ -5509,3 +5509,260 @@
 #48 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #49 {main}
 "} 
+[2024-05-21 07:19:07] local.ERROR: Call to undefined method Intervention\Image\Image::make() {"exception":"[object] (Error(code: 0): Call to undefined method Intervention\\Image\\Image::make() at /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php:52)
+[stacktrace]
+#0 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\downloadImg->handle()
+#1 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#6 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#7 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(178): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#8 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\downloadImg), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 {main}
+"} 
+[2024-05-21 07:27:28] local.ERROR: Call to undefined method Intervention\Image\Image::make() {"exception":"[object] (Error(code: 0): Call to undefined method Intervention\\Image\\Image::make() at /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php:52)
+[stacktrace]
+#0 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\downloadImg->handle()
+#1 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#6 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#7 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(178): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#8 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\downloadImg), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 {main}
+"} 
+[2024-05-21 07:27:45] local.ERROR: Command "config:publish" is not defined.
+
+Did you mean one of these?
+    config:cache
+    config:clear
+    lang:publish
+    module:publish
+    module:publish-config
+    module:publish-migration
+    module:publish-translation
+    sail:publish
+    stub:publish
+    vendor:publish {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"config:publish\" is not defined.
+
+Did you mean one of these?
+    config:cache
+    config:clear
+    lang:publish
+    module:publish
+    module:publish-config
+    module:publish-migration
+    module:publish-translation
+    sail:publish
+    stub:publish
+    vendor:publish at /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php:725)
+[stacktrace]
+#0 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(262): Symfony\\Component\\Console\\Application->find('config:publish')
+#1 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 
+[2024-05-21 07:47:42] local.ERROR: file_get_contents(https://www.mtlnovel.net/2023/07/after-rebirth-i-divorced-the-scumbag-180x240.jpg.webp): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ {"exception":"[object] (ErrorException(code: 0): file_get_contents(https://www.mtlnovel.net/2023/07/after-rebirth-i-divorced-the-scumbag-180x240.jpg.webp): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+ at /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php:41)
+[stacktrace]
+#0 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_get_conten...', '/Users/duycuong...', 41)
+#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'file_get_conten...', '/Users/duycuong...', 41)
+#2 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(41): file_get_contents('https://www.mtl...')
+#3 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(33): App\\Console\\Commands\\downloadImg->downloadImage('https://www.mtl...', '/Users/duycuong...')
+#4 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\downloadImg->handle()
+#5 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#10 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(178): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\downloadImg), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
+[2024-05-21 07:50:00] local.ERROR: file_get_contents(https://www.mtlnovel.net/2023/07/after-rebirth-i-divorced-the-scumbag-180x240.jpg.webp): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ {"exception":"[object] (ErrorException(code: 0): file_get_contents(https://www.mtlnovel.net/2023/07/after-rebirth-i-divorced-the-scumbag-180x240.jpg.webp): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+ at /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php:46)
+[stacktrace]
+#0 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_get_conten...', '/Users/duycuong...', 46)
+#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'file_get_conten...', '/Users/duycuong...', 46)
+#2 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(46): file_get_contents('https://www.mtl...')
+#3 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(35): App\\Console\\Commands\\downloadImg->downloadImage('https://www.mtl...', '/Users/duycuong...')
+#4 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\downloadImg->handle()
+#5 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#10 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(178): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\downloadImg), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
+[2024-05-21 07:51:51] local.ERROR: file_get_contents(https://www.mtlnovel.net/2023/07/after-rebirth-i-divorced-the-scumbag-180x240.jpg.webp): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ {"exception":"[object] (ErrorException(code: 0): file_get_contents(https://www.mtlnovel.net/2023/07/after-rebirth-i-divorced-the-scumbag-180x240.jpg.webp): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+ at /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php:47)
+[stacktrace]
+#0 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_get_conten...', '/Users/duycuong...', 47)
+#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'file_get_conten...', '/Users/duycuong...', 47)
+#2 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(47): file_get_contents('https://www.mtl...')
+#3 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(35): App\\Console\\Commands\\downloadImg->downloadImage('https://www.mtl...', '/Users/duycuong...')
+#4 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\downloadImg->handle()
+#5 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#10 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(178): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\downloadImg), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
+[2024-05-21 07:52:30] local.ERROR: file_get_contents(https://www.mtlnovel.net/2023/07/after-rebirth-i-divorced-the-scumbag-180x240.jpg.webp): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ {"exception":"[object] (ErrorException(code: 0): file_get_contents(https://www.mtlnovel.net/2023/07/after-rebirth-i-divorced-the-scumbag-180x240.jpg.webp): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+ at /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php:48)
+[stacktrace]
+#0 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_get_conten...', '/Users/duycuong...', 48)
+#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'file_get_conten...', '/Users/duycuong...', 48)
+#2 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(48): file_get_contents('https://www.mtl...')
+#3 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(36): App\\Console\\Commands\\downloadImg->downloadImage('https://www.mtl...', '/Users/duycuong...')
+#4 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\downloadImg->handle()
+#5 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#10 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(178): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\downloadImg), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
+[2024-05-21 07:53:43] local.ERROR: imagecreatefromstring(): Data is not in a recognized format {"exception":"[object] (ErrorException(code: 0): imagecreatefromstring(): Data is not in a recognized format at /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php:58)
+[stacktrace]
+#0 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'imagecreatefrom...', '/Users/duycuong...', 58)
+#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'imagecreatefrom...', '/Users/duycuong...', 58)
+#2 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(58): imagecreatefromstring('')
+#3 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(36): App\\Console\\Commands\\downloadImg->downloadImage('https://www.mtl...', '/Users/duycuong...')
+#4 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\downloadImg->handle()
+#5 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#7 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#8 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#9 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#10 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(178): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\downloadImg), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
+[2024-05-21 08:12:58] local.ERROR: imagejpeg(): Argument #1 ($image) must be of type GdImage, bool given {"exception":"[object] (TypeError(code: 0): imagejpeg(): Argument #1 ($image) must be of type GdImage, bool given at /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php:82)
+[stacktrace]
+#0 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(82): imagejpeg(false, '/Users/duycuong...')
+#1 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(36): App\\Console\\Commands\\downloadImg->downloadImage('https://www.mtl...', '/Users/duycuong...')
+#2 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\downloadImg->handle()
+#3 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#5 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#6 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#7 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#8 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#9 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(178): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\downloadImg), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2024-05-21 09:55:23] local.ERROR: Client error: `GET https://www.mtlnovel.com/americas-road-to-wealth/` resulted in a `403 Forbidden` response:
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class (truncated...)
+ {"exception":"[object] (GuzzleHttp\\Exception\\ClientException(code: 403): Client error: `GET https://www.mtlnovel.com/americas-road-to-wealth/` resulted in a `403 Forbidden` response:
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->
+<!--[if IE 7]>    <html class (truncated...)
+ at /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113)
+[stacktrace]
+#0 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/guzzlehttp/guzzle/src/Middleware.php(72): GuzzleHttp\\Exception\\RequestException::create(Object(GuzzleHttp\\Psr7\\Request), Object(GuzzleHttp\\Psr7\\Response), NULL, Array, NULL)
+#1 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/guzzlehttp/promises/src/Promise.php(209): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Response))
+#2 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/guzzlehttp/promises/src/Promise.php(158): GuzzleHttp\\Promise\\Promise::callHandler(1, Object(GuzzleHttp\\Psr7\\Response), NULL)
+#3 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/guzzlehttp/promises/src/TaskQueue.php(52): GuzzleHttp\\Promise\\Promise::GuzzleHttp\\Promise\\{closure}()
+#4 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/guzzlehttp/promises/src/Promise.php(251): GuzzleHttp\\Promise\\TaskQueue->run(true)
+#5 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/guzzlehttp/promises/src/Promise.php(227): GuzzleHttp\\Promise\\Promise->invokeWaitFn()
+#6 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/guzzlehttp/promises/src/Promise.php(272): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#7 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/guzzlehttp/promises/src/Promise.php(229): GuzzleHttp\\Promise\\Promise->invokeWaitList()
+#8 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/guzzlehttp/promises/src/Promise.php(69): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#9 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/guzzlehttp/guzzle/src/Client.php(189): GuzzleHttp\\Promise\\Promise->wait()
+#10 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(40): GuzzleHttp\\Client->request('GET', 'https://www.mtl...')
+#11 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\downloadImg->handle()
+#12 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#13 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#17 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(178): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\downloadImg), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 {main}
+"} 
+[2024-05-21 10:24:34] local.ERROR: imagejpeg(): Argument #1 ($image) must be of type GdImage, bool given {"exception":"[object] (TypeError(code: 0): imagejpeg(): Argument #1 ($image) must be of type GdImage, bool given at /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php:84)
+[stacktrace]
+#0 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(84): imagejpeg(false, '/Users/duycuong...')
+#1 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/app/Console/Commands/downloadImg.php(42): App\\Console\\Commands\\downloadImg->downloadImage('https://www.mtl...', '/Users/duycuong...')
+#2 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\downloadImg->handle()
+#3 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#5 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#6 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#7 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(208): Illuminate\\Container\\Container->call(Array)
+#8 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#9 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Console/Command.php(178): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\downloadImg), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /Users/duycuong/Documents/Projects/duycuong/php/novel_cms/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 

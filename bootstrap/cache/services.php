@@ -40,7 +40,6 @@
     36 => 'App\\Providers\\RouteServiceProvider',
     37 => 'App\\Providers\\RepositoryServiceProvider',
     38 => 'UniSharp\\LaravelFilemanager\\LaravelFilemanagerServiceProvider',
-    39 => 'Intervention\\Image\\ImageServiceProvider',
   ),
   'eager' => 
   array (
@@ -69,7 +68,6 @@
     22 => 'App\\Providers\\RouteServiceProvider',
     23 => 'App\\Providers\\RepositoryServiceProvider',
     24 => 'UniSharp\\LaravelFilemanager\\LaravelFilemanagerServiceProvider',
-    25 => 'Intervention\\Image\\ImageServiceProvider',
   ),
   'deferred' => 
   array (

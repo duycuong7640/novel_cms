@@ -2,6 +2,7 @@
 
 namespace Modules\Admins\Http\Controllers;
 
+use App\Helpers\FormatDataHelpers;
 use App\Helpers\Helpers;
 use App\Services\Admins\CategoryService;
 use App\Services\Admins\PostService;
@@ -36,7 +37,7 @@ class ProductsController extends Controller
     {
         try {
             $data['common'] = Helpers::titleAction([\adminForm::FORM_HEAD['INDEX']]);
-            $data['list'] = $this->productService->getList(['paginate' => \dataQuery::LIMIT, 'type' => $this->type]);
+            $data['list'] = FormatDataHelpers::formatListAdmin($this->productService->getList(['paginate' => \dataQuery::LIMIT, 'type' => $this->type]), \dataKey::PRODUCT);
             $data['category'] = $this->commonCategoryService->getListMenu(['type' => [$this->type], 'parent_id' => [(request()->has('parent_id') ? request()->get('parent_id') : '')]]);
             $data['multi'] = $this->commonCategoryService->getListMenu(['multi' => true]);
             return view('admins::products.index', ['data' => $data]);
