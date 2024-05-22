@@ -27,26 +27,26 @@ class downloadImg extends Command
      */
     public function handle()
     {
-        $products = Product::whereNull('thumbnail')->get();
-//        $products = Product::get();
-        foreach ($products as $row) {
-            try {
-                $imageUrl = $row->thumbnail_root;
-                $savePathJpg = public_path('storage/photos/novels/' . $row->slug . '.jpg');
-
-                if (!$this->urlExists($imageUrl)) {
-                    echo 'URL không tồn tại: ' . $imageUrl . "\n";
-                }else if (strpos($imageUrl, '.gif')) {
-                    echo 'ảnh gif: ' . $imageUrl . "\n";
-                }else {
-                    if ($this->downloadImage($imageUrl, $savePathJpg)) {
-                        $row->update(['thumbnail' => 'novels/' . $row->slug . '.jpg']);
-                    }
-                }
-            } catch (Exception $ex) {
-                echo $ex->getMessage();
-            }
-        }
+//        $products = Product::whereNull('thumbnail')->get();
+////        $products = Product::get();
+//        foreach ($products as $row) {
+//            try {
+//                $imageUrl = $row->thumbnail_root;
+//                $savePathJpg = public_path('storage/photos/novels/' . $row->slug . '.jpg');
+//
+//                if (!$this->urlExists($imageUrl)) {
+//                    echo 'URL không tồn tại: ' . $imageUrl . "\n";
+//                }else if (strpos($imageUrl, '.gif')) {
+//                    echo 'ảnh gif: ' . $imageUrl . "\n";
+//                }else {
+//                    if ($this->downloadImage($imageUrl, $savePathJpg)) {
+//                        $row->update(['thumbnail' => 'novels/' . $row->slug . '.jpg']);
+//                    }
+//                }
+//            } catch (Exception $ex) {
+//                echo $ex->getMessage();
+//            }
+//        }
     }
 
     public function urlExists($url)

@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Product extends Model
+class Author extends Model
 {
-    public $table = 'products';
+    public $table = 'authors';
 
     /**
      * The attributes that are mass assignable.
@@ -18,18 +18,12 @@ class Product extends Model
      */
     public $fillable = [
         'uuid',
-        'user_id',
         'title',
         'slug',
-        'category_id',
-        'category_multi',
-        'description',
         'content',
-        'thumbnail',
         'rank',
-        'view',
-        'status',
         'type',
+        'status',
 
         'title_seo',
         'meta_des',
@@ -39,20 +33,5 @@ class Product extends Model
     public $fillableSearchLike = [
         'title',
     ];
-
-    public function user()
-    {
-        return $this->hasOne(User::class, 'id', 'user_id');
-    }
-
-    public function category()
-    {
-        return $this->hasOne(Category::class, 'id', 'category_id');
-    }
-
-    public function author()
-    {
-        return $this->hasOne(Author::class, 'id', 'author_id');
-    }
 
 }

@@ -14,6 +14,7 @@ use Illuminate\Routing\Controller;
 use Illuminate\Support\MessageBag;
 use Modules\Admins\Http\Requests\Post\CreateRequest;
 use Modules\Admins\Http\Requests\Post\EditRequest;
+use Termwind\Components\Hr;
 
 class ProductsController extends Controller
 {

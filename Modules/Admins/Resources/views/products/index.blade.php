@@ -50,7 +50,7 @@
                                     <th width="50">STT</th>
                                     <th width="100">Thumbnail</th>
                                     <th>Title</th>
-                                    <th>Sort</th>
+                                    <th>Chap</th>
                                     <th>Category</th>
                                     <th width="100">Author</th>
                                     <th width="40">Status</th>
@@ -60,7 +60,7 @@
                                     {{--                                    <th width="55">Dịch vụ</th>--}}
                                     <th width="50">Created</th>
                                     <th width="50">Modified</th>
-{{--                                    <th width="50">ID</th>--}}
+                                    {{--                                    <th width="50">ID</th>--}}
                                     <th width="95"></th>
                                 </tr>
                                 </thead>
@@ -73,10 +73,12 @@
                                                 <img src="{{ asset($row->thumbnail) }}" class="mw-100">
                                             @endif
                                         </td>
-                                        <td>{{ $row->title }}</td>
-                                        <td>{{ $row->sort }}</td>
+                                        <td><p style="overflow: hidden; width: 300px; white-space: normal; display: -webkit-box; -webkit-line-clamp: 8; line-clamp: 8; -webkit-box-orient: vertical;">
+                                                {{ $row->title }}
+                                            </p></td>
+                                        <td>{{ $row->total_chap }}</td>
                                         <td>{{ !empty($row->category->title) ? $row->category->title : '' }}</td>
-                                        <td>{{ !empty($row->user->email) ? $row->user->email : '' }}</td>
+                                        <td>{{ !empty($row->author->title) ? $row->author->title : '' }}</td>
                                         <td>{{ \Helpers::renderStatus($row->status) }}</td>
                                         {{--                                        <td>--}}
                                         {{--                                            <a class="icon-form status active" href="{{ route('admin.product.status', ['id' => $row->id, 'field' => 'choose_1']) }}">--}}
@@ -104,7 +106,7 @@
                                         {{--                                        </td>--}}
                                         <td>{{ \Helpers::formatDate($row->created_at) }}</td>
                                         <td>{{ \Helpers::formatDate($row->updated_at) }}</td>
-{{--                                        <td>{{ $row->id }}</td>--}}
+                                        {{--                                        <td>{{ $row->id }}</td>--}}
                                         <td>
                                             <a class="icon-form" title="edit"
                                                href="{{ route('admin.product.edit', ['id' => $row->id, 'page' => $data['list']->currentPage(), 'parent_id' => (request()->has('parent_id') ? request()->get('parent_id') : '')]) }}">
