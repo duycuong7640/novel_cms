@@ -35,7 +35,7 @@
                                 <label>Slug</label>
                                 <input type="text" name="slug" class="form-control" placeholder=""/>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" style="display: none;">
                                 <label>Mô tả</label>
                                 <textarea class="ckeditor-mini" name="description"></textarea>
                             </div>

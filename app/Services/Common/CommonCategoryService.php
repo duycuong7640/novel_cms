@@ -96,7 +96,7 @@ class CommonCategoryService
             } else {
                 $arr['list'][$row->parent_id][] = $row->toArray();
             }
-            $arr['ids'][$row->id] = $row->title;
+            $arr['ids'][$row->id] = $row;
             if (in_array($row->type, [\dataCategory::TYPE[3]]) && !$row->parent_id) $arr['footer'][] = $row;
         }
 
@@ -181,7 +181,7 @@ class CommonCategoryService
             }
             foreach ($parmenu as $field) {
                 if ($parentid != null) {
-                    $trees .= '<li><a href="' . asset($route . $field['slug']) . '" title="' . $field['title'] . '">' . $field['title'] . '</a>';
+                    $trees .= '<li><a href="' . env('FE_URL') . $route . $field['slug'] . '" title="' . $field['title'] . '">' . $field['title'] . '</a>';
                     $trees = $this->multiMenu($_data, $field['id'], $trees, $_params);
                     $trees .= '</li>';
                 } else {
@@ -189,11 +189,11 @@ class CommonCategoryService
                         $active = '';
                         if ($field['type'] == 'home') {
                             if (!empty($_params['active_menu']['active']) && $_params['active_menu']['active'] == 'home') $active = 'class="active"';
-                            $trees .= '<li><a href="' . route('client.home') . '" title="Home" ' . $active . '>' . '<div class="text-center">' . $field['fontawesome_icon'] . '</div>' . 'Home</a>';
+                            $trees .= '<li><a href="' . env('FE_URL') . '" title="Home" ' . $active . '>' . '<div class="text-center">' . $field['fontawesome_icon'] . '</div>' . 'Home</a>';
                         } elseif ($field['type'] == 'link') {
                             $trees .= '<li><a href="' . $field['url'] . '" target="_blank" title="' . $field['title'] . '">' . '<div class="text-center">' . $field['fontawesome_icon'] . '</div>' . $field['title'] . '</a>';
                         } else {
-                            $trees .= '<li><a href="' . asset($route . $field['slug']) . '" title="' . $field['title'] . '">' . '<div class="text-center">' . $field['fontawesome_icon'] . '</div>' . $field['title'] . '</a>';
+                            $trees .= '<li><a href="' . env('FE_URL') . $route . $field['slug'] . '" title="' . $field['title'] . '">' . '<div class="text-center">' . $field['fontawesome_icon'] . '</div>' . $field['title'] . '</a>';
                         }
                     }
                     $trees = $this->multiMenu($_data, $field['id'], $trees, $_params);

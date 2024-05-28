@@ -51,6 +51,7 @@
                                     <th width="100">Thumbnail</th>
                                     <th>Title</th>
                                     <th>Chap</th>
+                                    <th>View</th>
                                     <th>Category</th>
                                     <th width="100">Author</th>
                                     <th width="40">Status</th>
@@ -77,6 +78,7 @@
                                                 {{ $row->title }}
                                             </p></td>
                                         <td>{{ $row->total_chap }}</td>
+                                        <td>{{ $row->view }}</td>
                                         <td>{{ !empty($row->category->title) ? $row->category->title : '' }}</td>
                                         <td>{{ !empty($row->author->title) ? $row->author->title : '' }}</td>
                                         <td>{{ \Helpers::renderStatus($row->status) }}</td>

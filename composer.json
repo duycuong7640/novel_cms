@@ -35,7 +35,8 @@
         "files": [
             "app/Helpers/Helpers.php",
             "app/Helpers/FormatDataHelpers.php",
-            "config/Types/dataAuth.php"
+            "config/Types/dataAuth.php",
+            "app/Helpers/ApiFormatDataHelpers.php"
         ]
     },
     "autoload-dev": {

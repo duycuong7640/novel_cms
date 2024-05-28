@@ -65,13 +65,13 @@
                         <a class="nav-link {{ Request::routeIs('admin.category.*')? 'active' : '' }}"
                            href="{{ route('admin.category.index') }}">{{ adminSidebar::SIDEBAR["CATEGORY"]["INDEX"] }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ Request::routeIs('admin.post.*')? 'active' : '' }}"
-                           href="{{ route('admin.post.index') }}">{{ adminSidebar::SIDEBAR["POST"]["INDEX"] }}</a>
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link {{ Request::routeIs('admin.post.*')? 'active' : '' }}"--}}
+{{--                           href="{{ route('admin.post.index') }}">{{ adminSidebar::SIDEBAR["POST"]["INDEX"] }}</a>--}}
+{{--                    </li>--}}
                     <li class="nav-item">
                         <a class="nav-link {{ Request::routeIs('admin.product.*')? 'active' : '' }}"
-                           href="{{ route('admin.product.index') }}">{{ adminSidebar::SIDEBAR["PRODUCT"]["INDEX"] }}</a>
+                           href="{{ route('admin.product.index') }}">Truyện</a>
                     </li>
                 </ul>
             </div>
@@ -123,12 +123,12 @@
         {{--                <i class="mdi mdi-doc menu-icon"></i>--}}
         {{--            </a>--}}
         {{--        </li>--}}
-        <li class="nav-item {{ Request::routeIs('admin.point.*')? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('admin.point.index') }}">
-                <span class="menu-title">Point</span>
-                <i class="icon-layers menu-icon"></i>
-            </a>
-        </li>
+{{--        <li class="nav-item {{ Request::routeIs('admin.point.*')? 'active' : '' }}">--}}
+{{--            <a class="nav-link" href="{{ route('admin.point.index') }}">--}}
+{{--                <span class="menu-title">Point</span>--}}
+{{--                <i class="icon-layers menu-icon"></i>--}}
+{{--            </a>--}}
+{{--        </li>--}}
         <li class="nav-item {{ Request::routeIs('admin.setting.*')? 'active' : '' }}">
             <a class="nav-link" href="{{ route('admin.setting.update',["id" => 1]) }}">
                 <span class="menu-title">Cấu hình</span>

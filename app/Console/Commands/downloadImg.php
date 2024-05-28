@@ -27,6 +27,7 @@ class downloadImg extends Command
      */
     public function handle()
     {
+
 //        $products = Product::whereNull('thumbnail')->get();
 ////        $products = Product::get();
 //        foreach ($products as $row) {

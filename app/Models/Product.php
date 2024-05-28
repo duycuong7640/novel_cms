@@ -47,12 +47,27 @@ class Product extends Model
 
     public function category()
     {
-        return $this->hasOne(Category::class, 'id', 'category_id');
+        return $this->hasOne(Category::class, 'id', 'category_id')->select('id', 'uuid', 'title', 'slug');
     }
 
     public function author()
     {
-        return $this->hasOne(Author::class, 'id', 'author_id');
+        return $this->hasOne(Author::class, 'id', 'author_id')->select('id', 'uuid', 'title', 'slug');
+    }
+
+    public function productChapters()
+    {
+        return $this->hasMany(ProductChapter::class);
+    }
+
+    public function latestChapters()
+    {
+        return $this->productChapters()->select('id', 'uuid', 'title', 'rank', 'created_at')->orderBy('rank', 'desc')->limit(3);
+    }
+
+    public function listChapters()
+    {
+        return $this->productChapters()->select('id', 'title', 'rank', 'created_at')->orderBy('rank', 'asc');
     }
 
 }

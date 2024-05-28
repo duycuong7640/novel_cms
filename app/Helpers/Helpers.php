@@ -84,4 +84,12 @@ class Helpers
         if (!empty($image[count($image) - 1])) return $image[count($image) - 1]; else return '';
     }
 
+    public static function paramsInjection($data)
+    {
+        foreach ($data as $k => $row) {
+            $data[$k] = !is_string($row) ? $row : addslashes($row);
+        }
+        return $data;
+    }
+
 }

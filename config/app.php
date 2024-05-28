@@ -83,7 +83,7 @@ return [
     |
     */
 
-    'locale' => 'vi',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -96,7 +96,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'vi',
+    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -187,6 +187,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
         'Helpers' => App\Helpers\Helpers::class,
+        'ApiFormatDataHelpers' => App\Helpers\ApiFormatDataHelpers::class,
 //        'Image' => Intervention\Image\Facades\Image::class,
     ])->toArray(),
 

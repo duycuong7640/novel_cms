@@ -8,6 +8,8 @@ use App\Repositories\Photos\PhotoRepository;
 use App\Repositories\Photos\PhotoRepositoryInterface;
 use App\Repositories\Posts\PostRepository;
 use App\Repositories\Posts\PostRepositoryInterface;
+use App\Repositories\ProductChapters\ProductChapterRepository;
+use App\Repositories\ProductChapters\ProductChapterRepositoryInterface;
 use App\Repositories\Products\ProductRepository;
 use App\Repositories\Products\ProductRepositoryInterface;
 use App\Repositories\Settings\SettingRepository;
@@ -29,6 +31,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(PostRepositoryInterface::class, PostRepository::class);
         $this->app->bind(ProductRepositoryInterface::class, ProductRepository::class);
         $this->app->bind(PhotoRepositoryInterface::class, PhotoRepository::class);
+        $this->app->bind(ProductChapterRepositoryInterface::class, ProductChapterRepository::class);
     }
 
     /**

@@ -6,6 +6,7 @@ use App\Helpers\Helpers;
 use App\Repositories\Products\ProductRepositoryInterface;
 use App\Services\Common\CommonCategoryService;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class ProductService
 {
@@ -20,6 +21,13 @@ class ProductService
 
     public function getList($_data = [])
     {
+//        $products = $this->productRepository->getAll(['limit' => 3000]);
+//        foreach ($products as $row){
+//            $d['slug'] = Str::slug($row->title, '-');
+//            $this->productRepository->update($row->uuid, $d);
+//        }
+//        die;
+
         if (request()->has('title')) {
             $_SESSION["keyword_cate"] = request()->get('title');
         }

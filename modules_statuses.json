@@ -1,4 +1,5 @@
 {
     "Pages": true,
-    "Admins": true
+    "Admins": true,
+    "Api": true
 }

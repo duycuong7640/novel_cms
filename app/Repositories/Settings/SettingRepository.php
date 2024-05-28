@@ -13,4 +13,9 @@ class SettingRepository extends BaseRepository implements SettingRepositoryInter
         return Setting::class;
     }
 
+    public function first()
+    {
+        return $this->model->first();
+    }
+
 }

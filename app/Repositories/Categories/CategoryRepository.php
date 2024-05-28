@@ -2,6 +2,7 @@
 
 namespace App\Repositories\Categories;
 
+use App\Helpers\Helpers;
 use App\Models\Category;
 use App\Repositories\BaseRepository;
 
@@ -54,6 +55,34 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
     public function findListParentId($_id)
     {
         return $this->model->select('id', 'title')->where('parent_id', $_id)->where('status', \dataCategory::ACTIVE)->get();
+    }
+
+    public function apiGetAll($_params)
+    {
+        $_params = Helpers::paramsInjection($_params);
+        $query = $this->model;
+        $query = self::apiGenerateConditionFind($_params, $query);
+        return $query->get();
+    }
+
+    public static function apiGenerateConditionFind($params, $model)
+    {
+        foreach ($model->fillableSearchLike as $r) {
+            if (!empty($params[$r])) {
+                $model = $model->where($r, 'LIKE', '%' . $params[$r] . '%');
+            }
+        }
+
+        if (!empty($params['type'])) {
+            $model = $model->where('type', $params['type']);
+        }
+
+        $model = $model->where('status', \dataCategory::ACTIVE);
+
+        $model = $model->select('id', 'title', 'slug', 'parent_id');
+
+        $model = $model->orderBy(!empty($params['orderField']) ? $params['orderField'] : 'id', !empty($params['orderType']) ? $params['orderType'] : \dataQuery::ORDER_ASC);
+        return $model;
     }
 
 }
