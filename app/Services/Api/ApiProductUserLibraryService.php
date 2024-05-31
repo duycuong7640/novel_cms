@@ -25,6 +25,13 @@ class ApiProductUserLibraryService
         return $this->formatDataProductUserLibrary($this->productUserLibraryRepository->apiGetAll($_data));
     }
 
+    public function apiGetAllList($_data = [])
+    {
+        $user = JWTAuth::user();
+        $_data['user_id'] = $user->id;
+        return $this->productUserLibraryRepository->apiGetAllList($_data);
+    }
+
     public function formatDataProductUserLibrary($_data = [], $type = '')
     {
         foreach ($_data as $row){

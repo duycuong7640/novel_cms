@@ -53,6 +53,24 @@ class ProductUserLibrariesController extends Controller
     }
 
     /**
+     * @OA\GET(
+     *     path="/v1/product-user-libraries/list",
+     *     tags={"ProductUserLibrary"},
+     *     @OA\Response(response="200", description="An example endpoint")
+     * )
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function indexList(Request $request): JsonResponse
+    {
+        try {
+            return ResponseHelpers::responseSuccess($this->apiProductUserLibraryService->apiGetAllList());
+        } catch (\Exception $e) {
+            return ResponseHelpers::responseServerError();
+        }
+    }
+
+    /**
      * @OA\POST(
      *     path="/v1/product-user-libraries",
      *     tags={"ProductUserLibrary"},

@@ -35,6 +35,10 @@ class ProductUserLibraryRepository extends BaseRepository implements ProductUser
         return $model;
     }
 
+    public function apiGetAllList($_params){
+        return $this->model->select('product_id')->where('user_id', $_params['user_id'])->pluck('product_id');
+    }
+
     public function apiGetDetail($_slug)
     {
         return $this->model->where('status', \dataCategory::ACTIVE)->where('slug', $_slug)->first();

@@ -55,6 +55,7 @@ Route::prefix('v1')->group(function () {
         Route::middleware('tokenApi')->group(function () {
             Route::prefix('product-user-libraries')->group(function () {
                 Route::get('', [\Modules\Api\Http\Controllers\ProductUserLibrariesController::class, 'index']);
+                Route::get('list', [\Modules\Api\Http\Controllers\ProductUserLibrariesController::class, 'indexList']);
                 Route::post('create', [\Modules\Api\Http\Controllers\ProductUserLibrariesController::class, 'create']);
                 Route::delete('delete/{id}', [\Modules\Api\Http\Controllers\ProductUserLibrariesController::class, 'delete']);
             });
