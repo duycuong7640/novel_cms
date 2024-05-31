@@ -171,6 +171,7 @@ return [
         \App\Providers\RepositoryServiceProvider::class,
         UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
 //        Intervention\Image\ImageServiceProvider::class,
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -189,6 +190,8 @@ return [
         'Helpers' => App\Helpers\Helpers::class,
         'ApiFormatDataHelpers' => App\Helpers\ApiFormatDataHelpers::class,
 //        'Image' => Intervention\Image\Facades\Image::class,
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
     ])->toArray(),
 
     'debug_blacklist' => [

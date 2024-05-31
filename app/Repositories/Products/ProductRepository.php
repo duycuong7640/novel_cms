@@ -63,9 +63,30 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
         $model = $model->where('status', \dataCategory::ACTIVE);
         if (isset($params['isContent'])) {
             $model = $model->select('id', 'uuid', 'title', 'slug', 'thumbnail', 'category_id', 'total_chap', 'view', 'rate', 'status', 'created_at', 'updated_at');
-        }else{
+        } else {
             $model = $model->select('id', 'uuid', 'title', 'slug', 'thumbnail', 'content', 'category_id', 'total_chap', 'view', 'rate', 'status', 'created_at', 'updated_at');
         }
+        $model = $model->orderBy(!empty($params['orderField']) ? $params['orderField'] : 'id', !empty($params['orderType']) ? $params['orderType'] : \dataQuery::ORDER_ASC);
+        return $model;
+    }
+
+    public function apiGetAllSearch($_params)
+    {
+        $_params = Helpers::paramsInjection($_params);
+        $query = $this->model;
+        $query = self::apiGetAllSearchGenerateConditionFind($_params, $query);
+        if (!empty($_params['paginate'])) {
+            return $query->paginate(!empty($_params['paginate']) ? $_params['paginate'] : \dataQuery::LIMIT);
+        }
+        return $query->limit(!empty($params['limit']) ? $params['limit'] : \dataQuery::LIMIT)->get();
+    }
+
+    public static function apiGetAllSearchGenerateConditionFind($params, $model)
+    {
+        $model = $model->where('total_chap', '>', 0);
+        $model = $model->where('title', 'like', '%' . $params['keyword'] . '%');
+        $model = $model->where('status', \dataCategory::ACTIVE);
+        $model = $model->select('id', 'uuid', 'title', 'slug', 'thumbnail', 'content', 'category_id', 'total_chap', 'view', 'rate', 'status', 'created_at', 'updated_at');
         $model = $model->orderBy(!empty($params['orderField']) ? $params['orderField'] : 'id', !empty($params['orderType']) ? $params['orderType'] : \dataQuery::ORDER_ASC);
         return $model;
     }

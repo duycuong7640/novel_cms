@@ -39,4 +39,5 @@ return array(
     '381c1f7485be5ec909ca0fe1ede4b928' => $baseDir . '/app/Helpers/Helpers.php',
     'f87f41f639bcf0a85d372292f5f5eb74' => $baseDir . '/app/Helpers/FormatDataHelpers.php',
     '1f287af26b1513c3189715e46becd979' => $baseDir . '/config/Types/dataAuth.php',
+    'cd600a0281e0d6d6fc8f87db5ec36075' => $baseDir . '/app/Helpers/ApiFormatDataHelpers.php',
 );

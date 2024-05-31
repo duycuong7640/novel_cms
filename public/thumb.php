@@ -366,7 +366,7 @@ class timthumb
 
             if (!is_file($path . $img) || !file_exists($path . $img)) {
 
-                $this->query['src'] = file_exists('no-image.png') ? dirname(dirname(dirname($_SERVER['SCRIPT_NAME']))) . 'no-image.png' : null;
+                $this->query['src'] = file_exists('no-image.jpg') ? dirname(dirname(dirname($_SERVER['SCRIPT_NAME']))) . 'no-image.jpg' : null;
 
             }
 
@@ -938,9 +938,9 @@ class timthumb
 
         echo '<h1>A TimThumb error has occured</h1>The following error(s) occured:<br />' . $html . '<br />';
 
-        echo '<br />Query String : ' . htmlentities($_SERVER['QUERY_STRING'], ENT_QUOTES);
-
-        echo '<br />TimThumb version : ' . VERSION . '</pre>';
+//        echo '<br />Query String : ' . htmlentities($_SERVER['QUERY_STRING'], ENT_QUOTES);
+//
+//        echo '<br />TimThumb version : ' . VERSION . '</pre>';
 
     }
 

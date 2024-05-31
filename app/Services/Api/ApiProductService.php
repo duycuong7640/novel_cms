@@ -41,6 +41,13 @@ class ApiProductService
         return $this->productRepository->apiGetAll($_data);
     }
 
+    public function apiGetAllSearch($_data = [])
+    {
+        if (empty($_data['keyword'])) return [];
+        if (!empty($_data['keyword']) && strlen($_data['keyword']) < 5) return [];
+        return $this->productRepository->apiGetAllSearch($_data);
+    }
+
     public function apiGetNewTop($_data = [])
     {
 //        if (isset($_data['isCategory']) && $_data['isCategory']) {

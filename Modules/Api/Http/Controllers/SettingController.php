@@ -40,7 +40,7 @@ class SettingController extends Controller
             return ResponseHelpers::responseSuccess([
                 'setting' => $this->apiSettingService->first(),
                 'logo' => $this->apiPhotoService->findByType('logo'),
-                'category_list' => $this->commonCategoryService->getListMenu(['multi' => 1, 'active_menu' => ['active' => 'home']])
+                'category_list' => $this->commonCategoryService->getListMenu(['multi' => 1, 'active_menu' => []])
             ]);
         } catch (\Exception $e) {
             return ResponseHelpers::responseServerError();

@@ -62,6 +62,39 @@ class ProductsController extends Controller
 
     /**
      * @OA\GET(
+     *     path="/v1/products/search",
+     *     tags={"Product"},
+     *     @OA\Parameter(
+     *        name="keyword", in="query", required=false, @OA\Schema(type="string")
+     *     ),
+     *     @OA\Parameter(
+     *        name="paginate", in="query", required=false, @OA\Schema(type="string")
+     *     ),
+     *     @OA\Parameter(
+     *        name="limit", in="query", required=false, @OA\Schema(type="string")
+     *     ),
+     *     @OA\Parameter(
+     *        name="orderField", in="query", required=false, @OA\Schema(type="string")
+     *     ),
+     *     @OA\Parameter(
+     *        name="orderType", in="query", required=false, @OA\Schema(type="string")
+     *     ),
+     *     @OA\Response(response="200", description="An example endpoint")
+     * )
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function search(Request $request): JsonResponse
+    {
+        try {
+            return ResponseHelpers::responseSuccess($this->apiProductService->apiGetAllSearch($request->all()));
+        } catch (\Exception $e) {
+            return ResponseHelpers::responseServerError();
+        }
+    }
+
+    /**
+     * @OA\GET(
      *     path="/v1/products/:slug",
      *     tags={"Product"},
      *     @OA\Response(response="200", description="An example endpoint")
