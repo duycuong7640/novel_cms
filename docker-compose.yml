@@ -20,8 +20,6 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: Idsa32ADsaWsdawW
             MYSQL_DATABASE: dicnovel
-            MYSQL_USER: root
-            MYSQL_PASSWORD: Idsa32ADsaWsdawW
         volumes:
             - db_data:/var/lib/mysql
         ports:
