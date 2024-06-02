@@ -34,6 +34,7 @@ class FormatDataHelpers
             case \dataKey::LOGO:
                 $thumb_url = \adminTimThumb::ADMIN['LOGO'];
                 $row->thumbnail2_root = $row->thumbnail2;
+                $row->thumbnail2 = asset(env('IMAGE_IMG') . $row->thumbnail2);
                 $row->thumbnail = asset(env('IMAGE_IMG') . $row->thumbnail);
                 break;
             default:

@@ -75,7 +75,7 @@
                                         {{--                                        </td>--}}
                                         <td>{{ $row->title }}</td>
                                         <td>{{ $row->rank }}</td>
-                                        <td>{{ !empty($data['multi']['ids'][$row->parent_id]) ? $data['multi']['ids'][$row->parent_id] : '' }}</td>
+                                        <td>{{ !empty($data['multi']['ids'][$row->parent_id]['title']) ? $data['multi']['ids'][$row->parent_id]['title'] : '' }}</td>
                                         <td>{{ dataCategory::TYPE_NAME[$row->type] }}</td>
                                         <td>{{ $row->user->email }}</td>
                                         <td>{{ \Helpers::renderStatus($row->status) }}</td>

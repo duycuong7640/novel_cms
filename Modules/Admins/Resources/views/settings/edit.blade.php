@@ -40,7 +40,7 @@
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input"
-                                                       name="status_gooogleindex"
+                                                       name="google_index"
                                                        value="1" {{ ($data['detail']->google_index == 1) ? 'checked' : '' }}>
                                                 {{ adminForm::FIELD['ACTIVE'] }}
                                             </label>
@@ -48,7 +48,7 @@
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input"
-                                                       name="status_gooogleindex"
+                                                       name="google_index"
                                                        value="0" {{ ($data['detail']->google_index == 0) ? 'checked' : '' }}>
                                                 {{ adminForm::FIELD['NON_ACTIVE'] }}
                                             </label>

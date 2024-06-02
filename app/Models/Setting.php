@@ -27,6 +27,7 @@ class Setting extends Model
         'facebook',
         'youtube',
         'google',
+        'google_index',
         'telephone',
         'code_header',
         'code_body',

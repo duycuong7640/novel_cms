@@ -29,11 +29,13 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Tiêu đề</label>
-                                <input type="text" name="title" value="{{ $data['detail']->title }}" class="form-control" placeholder=""/>
+                                <input type="text" name="title" value="{{ $data['detail']->title }}"
+                                       class="form-control" placeholder=""/>
                             </div>
                             <div class="form-group">
                                 <label>Link</label>
-                                <input type="link" name="point" value="{{ $data['detail']->link }}" class="form-control" placeholder=""/>
+                                <input type="link" name="point" value="{{ $data['detail']->link }}" class="form-control"
+                                       placeholder=""/>
                             </div>
                             <div class="form-group">
                                 <label>Trạng thái</label>
@@ -69,7 +71,9 @@
                                 <label>Thumbnail</label>
                                 <div class="row">
                                     <div class="col-12">
-                                        <img src="{{ asset($data['detail']->thumbnail) }}" width="150" class="mb-2">
+                                        <div style="background: #333;">
+                                            <img src="{{ asset($data['detail']->thumbnail) }}" width="150" class="mb-2">
+                                        </div>
                                         <div class="input-group">
                                                 <span class="input-group-btn">
                                                     <a data-input="thumbnail" class="lfm btn btn-primary">
@@ -88,7 +92,10 @@
                                 <label>Favicon</label>
                                 <div class="row">
                                     <div class="col-12">
-                                        <img src="{{ asset($data['detail']->thumbnail2) }}" width="150" class="mb-2">
+                                        <div style="background: #333;">
+                                            <img src="{{ asset($data['detail']->thumbnail2) }}" width="150"
+                                                 class="mb-2">
+                                        </div>
                                         <div class="input-group">
                                                 <span class="input-group-btn">
                                                     <a data-input="thumbnail2" class="lfm btn btn-primary">
@@ -105,7 +112,8 @@
                             </div>
                             <div class="form-group">
                                 <label>Vị trí</label>
-                                <input type="number" name="sort" value="{{ $data['detail']->sort }}" class="form-control" placeholder=""/>
+                                <input type="number" name="sort" value="{{ $data['detail']->sort }}"
+                                       class="form-control" placeholder=""/>
                             </div>
                         </div>
                     </div>

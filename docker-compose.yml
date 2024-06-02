@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: ./docker/php8.1/Dockerfile
+        container_name: dicnovel_app
+        working_dir: /var/www/html
+        volumes:
+            - ./src:/var/www/html
+        ports:
+            - "80:80"
+        networks:
+            dicnovel_backend:
+                ipv4_address: 175.25.0.10
+    db:
+        image: mysql:5.7
+        container_name: dicnovel_db
+        environment:
+            MYSQL_ROOT_PASSWORD: Idsa32ADsaWsdawW
+            MYSQL_DATABASE: dicnovel
+            MYSQL_USER: root
+            MYSQL_PASSWORD: Idsa32ADsaWsdawW
+        volumes:
+            - db_data:/var/lib/mysql
+        ports:
+            - "3308:3306"
+        networks:
+            dicnovel_backend:
+                ipv4_address: 175.25.0.11
+
+networks:
+    dicnovel_backend:
+        driver: bridge
+        ipam:
+            config:
+                -   subnet: 175.25.0.0/16
+                    gateway: 175.25.5.254
+
+volumes:
+    db_data:
