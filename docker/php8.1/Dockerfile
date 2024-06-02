@@ -31,14 +31,6 @@ WORKDIR /var/www/html
 # Copy Apache vhost file
 COPY apache.conf /etc/apache2/sites-available/000-default.conf
 
-# Copy entrypoint.sh
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-
-# Chuyển đổi entrypoint.sh thành tệp thực thi
-RUN chmod +x /usr/local/bin/entrypoint.sh
-
-# Sử dụng entrypoint.sh làm entrypoint của container
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-
 # Expose port 80
 EXPOSE 80
+CMD ["apache2-foreground"]
