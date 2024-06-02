@@ -29,7 +29,7 @@ RUN docker-php-ext-enable opcache
 WORKDIR /var/www/html
 
 # Copy Apache vhost file
-COPY apache.conf /etc/apache2/sites-available/000-default.conf
+COPY ./docker/php8.1/apache.conf /etc/apache2/sites-available/000-default.conf
 
 # Run migration
 RUN php artisan migrate --force
