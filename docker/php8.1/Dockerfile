@@ -31,6 +31,9 @@ WORKDIR /var/www/html
 # Copy Apache vhost file
 COPY apache.conf /etc/apache2/sites-available/000-default.conf
 
+# Run migration
+RUN php artisan migrate --force
+
 # Expose port 80
 EXPOSE 80
 CMD ["apache2-foreground"]
