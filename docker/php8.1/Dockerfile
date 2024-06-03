@@ -9,10 +9,8 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     zip \
     unzip \
-    mysql-client
-
-# Clear cache
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+    mysql-client \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
@@ -35,6 +33,12 @@ COPY ./docker/php8.1/apache.conf /etc/apache2/sites-available/000-default.conf
 # Copy entrypoint script
 COPY ./docker/php8.1/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Copy application source
+COPY ./src /var/www/html
+
+# Install Composer dependencies
+RUN composer install --no-interaction --optimize-autoloader --no-dev
 
 # Expose port 80
 EXPOSE 80
