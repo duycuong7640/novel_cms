@@ -13,7 +13,11 @@ php composer.phar install
 php artisan storage:link
 
 # Set permissions for storage and public/storage
-chown -R www-data:www-data /var/www/html/storage /var/www/html/public/storage
+#chown -R www-data:www-data /var/www/html/storage /var/www/html/public/storage
+
+# Set proper permissions for storage and cache directories
+chown -R www-data:www-data /var/www/html/storage /var/www/html/public/storage /var/www/html/public/cache
+chmod -R 755 /var/www/html/storage /var/www/html/public/storage /var/www/html/public/cache
 
 # Run migrations
 php artisan migrate --force
