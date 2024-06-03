@@ -29,8 +29,8 @@ RUN docker-php-ext-enable opcache
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy application source
-COPY ./src /var/www/html
+# Copy application source files
+COPY ./ /var/www/html
 
 # Copy Apache vhost file
 COPY ./docker/php8.1/apache.conf /etc/apache2/sites-available/000-default.conf
