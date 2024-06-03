@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 /**
  * TimThumb by Ben Gillbanks and Mark Maunder
  * Based on work done by Tim McDaniels and Darren Hoyt
@@ -454,7 +454,6 @@ class timthumb
             }
 
             $this->cacheDirectory = FILE_CACHE_DIRECTORY;
-echo $this->cacheDirectory.'----';
             if (!touch($this->cacheDirectory . '/index.html')) {
 
                 $this->error("Could not create the index.html file - to fix this create an empty file named index.html file in the cache directory.");
@@ -2677,4 +2676,4 @@ echo $this->cacheDirectory.'----';
     }
 
 }
-
+ob_end_flush();
