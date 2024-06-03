@@ -9,15 +9,18 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     zip \
     unzip \
-    default-mysql-client
+    default-mysql-client \
+    libjpeg-dev \
+    libfreetype6-dev
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
-#RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath \
-    && docker-php-ext-configure gd --with-jpeg --with-freetype \
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath
+
+# Configure GD extension
+RUN docker-php-ext-configure gd --with-jpeg --with-freetype \
     && docker-php-ext-install -j$(nproc) gd
 
 # Enable Apache mod_rewrite
