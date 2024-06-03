@@ -14,13 +14,13 @@ services:
         networks:
             dicnovel_backend:
                 ipv4_address: 175.25.0.10
-        environment:
-            DB_CONNECTION: mysql
-            DB_HOST: dicnovel_db
-            DB_PORT: 3306
-            DB_DATABASE: dicnovel
-            DB_USERNAME: root
-            DB_PASSWORD: Idsa32ADsaWsdawW
+#        environment:
+#            DB_CONNECTION: mysql
+#            DB_HOST: dicnovel_db
+#            DB_PORT: 3306
+#            DB_DATABASE: dicnovel
+#            DB_USERNAME: root
+#            DB_PASSWORD: Idsa32ADsaWsdawW
 
     db:
         image: mysql:5.7
