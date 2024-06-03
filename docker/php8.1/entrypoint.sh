@@ -9,6 +9,9 @@
 # Install Composer dependencies
 php composer.phar install
 
+# Install storage file manager
+php artisan storage:link
+
 # Set permissions for storage and public/storage
 chown -R www-data:www-data /var/www/html/storage /var/www/html/public/storage
 
