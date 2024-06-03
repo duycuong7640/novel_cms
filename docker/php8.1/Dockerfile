@@ -40,7 +40,7 @@ COPY ./docker/php8.1/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Install Composer dependencies
-RUN composer install --no-interaction --optimize-autoloader --no-dev
+#RUN composer install --no-interaction --optimize-autoloader --no-dev
 
 # Expose port 80
 EXPOSE 80

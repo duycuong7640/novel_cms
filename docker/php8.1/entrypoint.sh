@@ -6,6 +6,9 @@ while ! mysqladmin ping -h"dicnovel_db" --silent; do
     sleep 2
 done
 
+# Install Composer dependencies
+php composer.phar install
+
 # Run migrations
 php artisan migrate --force
 
