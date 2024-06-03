@@ -9,6 +9,9 @@
 # Install Composer dependencies
 php composer.phar install
 
+# Set permissions for storage and public/storage
+chown -R www-data:www-data /var/www/html/storage /var/www/html/public/storage
+
 # Run migrations
 php artisan migrate --force
 
