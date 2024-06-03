@@ -29,15 +29,15 @@ RUN docker-php-ext-enable opcache
 # Set working directory
 WORKDIR /var/www/html
 
+# Copy application source
+COPY ./src /var/www/html
+
 # Copy Apache vhost file
 COPY ./docker/php8.1/apache.conf /etc/apache2/sites-available/000-default.conf
 
 # Copy entrypoint script
 COPY ./docker/php8.1/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
-
-# Copy application source
-COPY ./src /var/www/html
 
 # Install Composer dependencies
 RUN composer install --no-interaction --optimize-autoloader --no-dev
