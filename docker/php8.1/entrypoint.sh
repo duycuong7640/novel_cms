@@ -1,10 +1,15 @@
 #!/bin/bash
 
-# Di chuyển vào thư mục ứng dụng Laravel
-cd /var/www/html
+# Wait for MySQL to be ready
+while ! mysqladmin ping -h"$DB_HOST" --silent; do
+    sleep 1
+done
 
-# Chạy lệnh migrate
+# Install composer dependencies
+composer install
+
+# Run Laravel migrations
 php artisan migrate --force
 
-# Khởi động Apache
-apache2-foreground
+# Start Apache
+exec "$@"

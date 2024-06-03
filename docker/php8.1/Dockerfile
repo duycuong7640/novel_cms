@@ -29,8 +29,14 @@ RUN docker-php-ext-enable opcache
 WORKDIR /var/www/html
 
 # Copy Apache vhost file
-COPY apache.conf /etc/apache2/sites-available/000-default.conf
+COPY ./docker/php8.1/apache.conf /etc/apache2/sites-available/000-default.conf
+
+# Copy entrypoint script
+COPY ./docker/php8.1/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Expose port 80
 EXPOSE 80
+
+ENTRYPOINT ["entrypoint.sh"]
 CMD ["apache2-foreground"]
