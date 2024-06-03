@@ -9,6 +9,8 @@ services:
         working_dir: /var/www/html
         volumes:
             - ./:/var/www/html
+            - app_storage:/var/www/html/storage
+            - app_public_storage:/var/www/html/public/storage
         ports:
             - "80:80"
         networks:
@@ -46,3 +48,5 @@ networks:
 
 volumes:
     db_data:
+    app_storage:
+    app_public_storage:
