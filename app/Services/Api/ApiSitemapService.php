@@ -53,12 +53,12 @@ class ApiSitemapService
         }
 
         // Product chapter
-        $productChapters = ProductChapter::select('id', 'product_id', 'title', 'rank', 'created_at', 'updated_at')->whereNotNull('content')->paginate(500, ['*'], 'page', 1);
+        $productChapters = ProductChapter::select('id', 'product_id', 'title', 'rank', 'created_at', 'updated_at')->whereNotNull('content')->paginate(1000, ['*'], 'page', 1);
         for ($i = 1; $i <= $productChapters->lastPage(); $i++) {
             if ($i == 1) {
                 $xmlProduct = $this->sitemapFolder($productChapters, 'productChapter', $i);
             } else {
-                $productChapters = ProductChapter::select('id', 'product_id', 'title', 'rank', 'created_at', 'updated_at')->whereNotNull('content')->paginate(500, ['*'], 'page', $i);
+                $productChapters = ProductChapter::select('id', 'product_id', 'title', 'rank', 'created_at', 'updated_at')->whereNotNull('content')->paginate(1000, ['*'], 'page', $i);
                 $xmlProduct = $this->sitemapFolder($productChapters, 'productChapter', $i);
             }
             echo "--".$i;
@@ -89,7 +89,7 @@ class ApiSitemapService
                 $url = '';
                 switch ($type) {
                     case 'category':
-                        $url = env('FE_URL') . $row->slug;
+                        $url = env('COMMON_URL') . $row->slug;
                         $file = 'category';
                         $savePath = public_path('sitemaps/' . $file . '.xml');
                         break;
@@ -99,7 +99,7 @@ class ApiSitemapService
                             $flag = false;
                         } else {
                             $category = $row->category;
-                            $url = env('FE_URL') . $category->slug . '/' . $row->slug;
+                            $url = env('COMMON_URL') . $category->slug . '/' . $row->slug;
                             $file = 'page' . $page . '-list-novels';
                             $savePath = public_path('sitemaps/' . $file . '.xml');
                         }
@@ -139,7 +139,7 @@ class ApiSitemapService
             $sitemap .= '</urlset>';
 
             @file_put_contents($savePath, $sitemap);
-            return env('FE_URL') . 'sitemaps/' . $file . '.xml';
+            return env('COMMON_URL') . 'sitemaps/' . $file . '.xml';
 
         } catch (\Exception $ex) {
             Helpers::pre($ex->getMessage());

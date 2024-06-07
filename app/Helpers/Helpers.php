@@ -283,7 +283,7 @@ class Helpers
     {
         $slug = self::renderSlug(self::removePrefix($chap->title));
         $chap_slug = !empty($slug) ? $slug : 'chapter-' . $chap->rank;
-        return env('FE_URL') . $product_slug . '/chapter/' . $chap_slug . '-' . $chap->id;
+        return env('COMMON_URL') . $product_slug . '/chapter/' . $chap_slug . '-' . $chap->id;
     }
 
     public static function removePrefix($text)
