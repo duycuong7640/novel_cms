@@ -67,4 +67,10 @@ Route::prefix('v1')->group(function () {
             Route::get('{id}', [\Modules\Api\Http\Controllers\ProductChaptersController::class, 'show']);
         });
     });
+
+    Route::middleware('throttle:100,5')->group(function () {
+        Route::prefix('sitemap-generate')->group(function () {
+            Route::post('', [\Modules\Api\Http\Controllers\SitemapGenerateController::class, 'sitemap']);
+        });
+    });
 });

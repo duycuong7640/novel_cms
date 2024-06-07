@@ -49,6 +49,11 @@ return [
             'root' => public_path('storage/photos/novels/'),
         ],
 
+        'publicSitemap' => [
+            'driver' => 'local',
+            'root' => public_path('sitemaps/'),
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

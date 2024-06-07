@@ -153,24 +153,24 @@ class CategoriesController extends Controller
      * @param int $id
      * @return Renderable
      */
-    public function destroy($id)
-    {
-        try {
-            $detail = $this->categoryService->find($id);
-            if (empty($detail->id)) return abort(404);
-
-            if (in_array($id, [])) {
-                session()->flash('error', \adminNotify::CANNOT_DELETE);
-                return back();
-            }
-            if ($this->categoryService->destroy($id)) {
-                session()->flash('success', \adminNotify::SUCCESS);
-            } else {
-                session()->flash('error', \adminNotify::FAIL);
-            }
-            return back();
-        } catch (\Exception $e) {
-            return !empty($e->getMessage()) ? abort('500') : abort(404);
-        }
-    }
+//    public function destroy($id)
+//    {
+//        try {
+//            $detail = $this->categoryService->find($id);
+//            if (empty($detail->id)) return abort(404);
+//
+//            if (in_array($id, [])) {
+//                session()->flash('error', \adminNotify::CANNOT_DELETE);
+//                return back();
+//            }
+//            if ($this->categoryService->destroy($id)) {
+//                session()->flash('success', \adminNotify::SUCCESS);
+//            } else {
+//                session()->flash('error', \adminNotify::FAIL);
+//            }
+//            return back();
+//        } catch (\Exception $e) {
+//            return !empty($e->getMessage()) ? abort('500') : abort(404);
+//        }
+//    }
 }

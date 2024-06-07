@@ -3,6 +3,7 @@
 namespace App\Helpers;
 
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Str;
 use Ramsey\Uuid\Uuid;
 
 class Helpers
@@ -270,11 +271,37 @@ class Helpers
         return $arr[array_rand($arr)];
     }
 
-    public static function replaceSpecial($text){
+    public static function replaceSpecial($text)
+    {
         $text = str_replace('DivNovel', 'DicNovel', $text);
 //        $pattern = '/[^a-z0-9"“\'!’ ]+/i';
 //        $clean_string = preg_replace($pattern, '', $text);
         return $text;
+    }
+
+    public static function renderLinkRead($product_slug, $chap)
+    {
+        $slug = self::renderSlug(self::removePrefix($chap->title));
+        $chap_slug = !empty($slug) ? $slug : 'chapter-' . $chap->rank;
+        return env('FE_URL') . $product_slug . '/chapter/' . $chap_slug . '-' . $chap->id;
+    }
+
+    public static function removePrefix($text)
+    {
+        $pattern = '/^.*(?=Chapter)/';
+        $text = str_replace("'", "\'", $text);
+        $text = @preg_replace($pattern, '', $text);
+        if (@strlen($text) > 5) {
+//            $patternSpecialChars = '/[~。\]\[\(\)]/';
+//            $text = @preg_replace($patternSpecialChars, '', $text);
+            $text = str_replace(['~', '。', '[', ']', '(', ')'], '', $text);
+        }
+        return $text;
+    }
+
+    public static function renderSlug($title)
+    {
+        return Str::slug($title, '-');
     }
 
 }
