@@ -14,7 +14,7 @@ services:
         ports:
             - "80:80"
         networks:
-            dicnovel_backend:
+            - dicnovel_backend
 #                ipv4_address: 175.25.0.10
 #        environment:
 #            DB_CONNECTION: mysql
@@ -35,7 +35,7 @@ services:
         ports:
             - "3308:3306"
         networks:
-            dicnovel_backend:
+            - dicnovel_backend
 #            dicnovel_backend:
 #                ipv4_address: 175.25.0.11
 
