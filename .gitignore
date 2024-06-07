@@ -23,5 +23,4 @@ composer.lock
 ._mysql
 ._*
 /composer.lock
-/public/sitemap.xml
 /.vscode
