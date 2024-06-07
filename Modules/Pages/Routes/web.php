@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', 'HomeController@index')->name('client.home');
 //Route::prefix('')->group(function() {
 //    Route::get('/', 'HomeController@index')->name('client.home');
 //
