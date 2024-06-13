@@ -38,6 +38,16 @@ services:
             - dicnovel_backend
 #            dicnovel_backend:
 #                ipv4_address: 175.25.0.11
+    redis:
+        image: redis:latest
+        container_name: dicnovel_redis
+        ports:
+            - "6379:6379"
+        command: [ "redis-server", "--requirepass", "Hdss6387KgdsEGA3Jdc" ]
+        networks:
+            - dicnovel_backend
+#            dicnovel_backend:
+#                ipv4_address: 175.25.0.11
 
 networks:
     dicnovel_backend:
