@@ -24,6 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         try {
+            die;
             $data['commonSetting'] = $this->commonSetting->commonDataSite(['active' => 'home']);
             $data['common'] = Helpers::metaHead(!empty($data['commonSetting']['setting']) ? $data['commonSetting']['setting'] : []);
             return view('pages::index')->with('data', $data);
