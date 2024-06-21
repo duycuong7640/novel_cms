@@ -71,7 +71,7 @@
                                         <td>{{ \Helpers::renderSTT($k + 1, $data['list']) }}</td>
                                         <td>
                                             @if(!empty($row->thumbnail))
-                                                <img src="{{ asset($row->thumbnail) }}" class="mw-100">
+                                                <img src="{{ $row->thumbnail }}" class="mw-100">
                                             @endif
                                         </td>
                                         <td><p style="overflow: hidden; width: 300px; white-space: normal; display: -webkit-box; -webkit-line-clamp: 8; line-clamp: 8; -webkit-box-orient: vertical;">

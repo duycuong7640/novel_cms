@@ -29,13 +29,13 @@ class FormatDataHelpers
                 break;
             case \dataKey::PRODUCT:
                 $thumb_url = \adminTimThumb::ADMIN['PRODUCT'];
-                $row->thumbnail = asset(env('IMAGE_IMG') . $row->thumbnail);
+                $row->thumbnail = env('DOMAIN_IMG') . env('IMAGE_IMG') . $row->thumbnail;
                 break;
             case \dataKey::LOGO:
                 $thumb_url = \adminTimThumb::ADMIN['LOGO'];
                 $row->thumbnail2_root = $row->thumbnail2;
-                $row->thumbnail2 = asset(env('IMAGE_IMG') . $row->thumbnail2);
-                $row->thumbnail = asset(env('IMAGE_IMG') . $row->thumbnail);
+                $row->thumbnail2 = env('DOMAIN_IMG') . env('IMAGE_IMG') . $row->thumbnail2;
+                $row->thumbnail = env('DOMAIN_IMG') . env('IMAGE_IMG') . $row->thumbnail;
                 break;
             default:
                 break;
