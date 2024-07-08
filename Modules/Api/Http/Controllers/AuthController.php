@@ -80,9 +80,8 @@ class AuthController extends Controller
     public function register(RegisterRequest $request): JsonResponse
     {
         try {
-            $register = $this->apiUserService->store($request->validated());
-            return ResponseHelpers::responseSuccess();
-        } catch (\Exception $e) {Helpers::pre($e->getMessage());
+            return $this->apiUserService->store($request->validated());
+        } catch (\Exception $e) {
             return ResponseHelpers::responseServerError();
         }
     }

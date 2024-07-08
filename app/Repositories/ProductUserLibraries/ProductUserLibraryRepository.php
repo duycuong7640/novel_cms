@@ -24,7 +24,7 @@ class ProductUserLibraryRepository extends BaseRepository implements ProductUser
         if (!empty($_params['paginate'])) {
             return $query->paginate(!empty($_params['paginate']) ? $_params['paginate'] : \dataQuery::LIMIT);
         }
-        return $query->limit(!empty($params['limit']) ? $params['limit'] : \dataQuery::LIMIT)->get();
+        return $query->limit(!empty($_params['limit']) ? $_params['limit'] : \dataQuery::LIMIT)->get();
     }
 
     public static function apiGetAllGenerateConditionFind($params, $model)

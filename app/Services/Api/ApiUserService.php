@@ -23,7 +23,7 @@ class ApiUserService
         $this->model = $model;
     }
 
-    public function store($data): JsonResponse
+    public function store($data)
     {
         $data = Arr::only($data, $this->model->fillable);
         $data['uuid'] = Helpers::buildUUID();
