@@ -90,7 +90,7 @@ if (!defined('ERROR_IMAGE')) define('ERROR_IMAGE', '');                         
 
 if (!defined('PNG_IS_TRANSPARENT')) define('PNG_IS_TRANSPARENT', FALSE);                        // Define if a png image should have a transparent background color. Use False value if you want to display a custom coloured canvas_colour
 
-if (!defined('DEFAULT_Q')) define('DEFAULT_Q', 100);                                    // Default image quality. Allows overrid in timthumb-config.php
+if (!defined('DEFAULT_Q')) define('DEFAULT_Q', 75);                                    // Default image quality. Allows overrid in timthumb-config.php
 
 if (!defined('DEFAULT_ZC')) define('DEFAULT_ZC', 1);                                    // Default zoom/crop setting. Allows overrid in timthumb-config.php
 
