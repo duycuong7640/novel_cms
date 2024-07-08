@@ -18,7 +18,7 @@ class ProductChapterRepository extends BaseRepository implements ProductChapterR
 
     public function apiGetDetail($_id)
     {
-        return $this->model->where('status', \dataCategory::ACTIVE)->where('id', $_id)->first();
+        return $this->model->whereIn('status', [\dataCategory::ACTIVE, 3])->where('id', $_id)->first();
     }
 
     public function apiDetailChapterForRank($_productId, $_rank)
