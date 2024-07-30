@@ -24,7 +24,7 @@ class ProductChapterRepository extends BaseRepository implements ProductChapterR
     public function apiDetailChapterForRank($_productId, $_rank)
     {
         return $this->model->select('id', 'uuid', 'title', 'slug', 'rank')
-            ->where('status', \dataCategory::ACTIVE)
+//            ->where('status', \dataCategory::ACTIVE)
             ->where('product_id', $_productId)
             ->where('rank', $_rank)
             ->first();
